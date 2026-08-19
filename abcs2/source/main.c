@@ -5,9 +5,9 @@
 #include <sys/wait.h>
 
 #define INPUT_SIZE 100
-#define NAME_SIZE 20
-#define COMMAND_SIZE 20
-#define ARG_SIZE 20
+#define NAME_SIZE 30
+#define COMMAND_SIZE 30
+#define ARG_SIZE 30
 
 
 typedef struct task {
@@ -130,7 +130,7 @@ void newTask(TaskList *taskList, char **array, int qtd) {
     strcpy(task->name, array[1]);
     strcpy(task->command, array[2]);
 
-    task->args = (char **) malloc((qtd-3) * sizeof(char *));
+    task->args = (char **) malloc((qtd-2) * sizeof(char *));
     if (task->args == NULL) {
         printf("Falha ao adicionar task.\n");
         free(task);
@@ -138,11 +138,11 @@ void newTask(TaskList *taskList, char **array, int qtd) {
         return;
     }
     // printf("Antes do for arg\n");
-    for (int i=3; i<qtd; i++) {
-        (task->args)[i-3] = (char *) malloc(ARG_SIZE * sizeof(char));
-        if ((task->args)[i-3] == NULL) {
+    for (int i=2; i<qtd; i++) {
+        (task->args)[i-2] = (char *) malloc(ARG_SIZE * sizeof(char));
+        if ((task->args)[i-2] == NULL) {
             printf("Falha ao adicionar task.\n");
-            for (int j=(i-4); j>=0; j--) {
+            for (int j=(i-3); j>=0; j--) {
                 free((task->args)[j]);
                 (task->args)[j] = NULL;
             }
@@ -152,9 +152,9 @@ void newTask(TaskList *taskList, char **array, int qtd) {
         }
         // printf("Antes do strcpy\n");
         if (array[i] != NULL) {
-            strcpy((task->args)[i-3], array[i]);
+            strcpy((task->args)[i-2], array[i]);
         } else {
-            (task->args)[i-3] = NULL;
+            (task->args)[i-2] = NULL;
         }
     }
     // printf("Depois do for arg\n");
@@ -170,22 +170,113 @@ void newTask(TaskList *taskList, char **array, int qtd) {
         aux->next = task;
     }
 
-    printf("Nome: %s\n", task->name);
-    printf("Comando: %s\n", task->command);
-    printf("Argumentos: ");
-    for (int i=3; i<qtd; i++) {
-        if ((task->args)[i-3] != NULL) {
-            printf("%s, ", (task->args)[i-3]);
-        } else {
-            printf("NULL");
-        }
+    // printf("Nome: %s\n", task->name);
+    // printf("Comando: %s\n", task->command);
+    // printf("Argumentos: ");
+    // for (int i=2; i<qtd; i++) {
+    //     if ((task->args)[i-2] != NULL) {
+    //         printf("%s, ", (task->args)[i-2]);
+    //     } else {
+    //         printf("NULL");
+    //     }
         
-    }
-    printf("\n");
+    // }
+    // printf("\n");
 
     return;
 }
 
+
+void runTaskPipe(TaskList *taskList, char **array, int qtd) {
+    int n = qtd - 2, pid[n];
+    int fd[n-2][2], readIndex, writeIndex;
+    Task **taskQueue = (Task **) malloc(n * sizeof(Task *));
+    if (taskQueue == NULL) {
+        printf("Erro ao executar o comando.\n");
+        return;
+    }
+    for (int i=2; i<(qtd-1); i++) {
+        // printf("%d ", i-2);
+        taskQueue[i-2] = findTask(taskList, array[i]);
+        if (taskQueue[i-2] == NULL) {
+            printf("Task nao encontrada na lista.\n");
+            free(taskQueue);
+            taskQueue = NULL;
+            return;
+        }
+    }
+    // printf("Achou as tasks\n");
+    for (int i=0; i<(n-2); i++) {
+        if (pipe(fd[i]) == -1) {
+            printf("Erro ao executar o comando.\n");
+            free(taskQueue);
+            taskQueue = NULL;
+            return;
+        }
+    }
+
+    // for (int i=0; i<(n-1); i++) {
+    //     printf("%s, ", taskQueue[i]->name);
+    // }
+    // printf("\n");
+
+    for (int i=0; i<(n-1); i++) {
+        pid[i] = fork();
+        if (pid[i] == -1) {
+            printf("Erro ao executar o comando.\n");
+            free(taskQueue);
+            taskQueue = NULL;
+            return;
+        }
+
+        if (pid[i] == 0) {
+            // Processo filho
+            readIndex = i - 1;
+            writeIndex = i;
+			for (int j=0; j<(n-2); j++) {
+				if (j != readIndex) {
+					close(fd[j][0]);
+                    // printf("%d: Closed fd[%d][0]\n", i, j);
+				}
+				if (j != writeIndex) {
+					close(fd[j][1]);
+                    // printf("%d: Closed fd[%d][1]\n", i, j);
+				}
+			}
+
+			if (readIndex > -1) {
+                // printf("%d: Ler o index %d\n", i, readIndex);
+                // printf("%d: Closed fd[%d][0]\n", i, readIndex);
+				dup2(fd[readIndex][0], STDIN_FILENO);
+				close(fd[readIndex][0]);
+			}
+			if (writeIndex < (n-2)) {
+                // printf("%d: Escrever para o index %d\n", i, writeIndex);
+                // printf("%d: Closed fd[%d][1]\n", i, writeIndex);
+				dup2(fd[writeIndex][1], STDOUT_FILENO);
+				close(fd[writeIndex][1]);
+			}
+
+            execvp(taskQueue[i]->command, taskQueue[i]->args);
+
+            printf("Comando nao encontrado.\n");
+            exit(1);
+        }
+    }
+    // Processo pai (paralelo)
+	for (int i=0; i<(n-2); i++) {
+		close(fd[i][0]);
+		close(fd[i][1]);
+	}
+    for (int i=0; i<(n-1); i++) {
+        wait(NULL);
+        // printf("Esperou por um processo\n");
+    }
+
+    free(taskQueue);
+    taskQueue = NULL;
+    return;
+}
 
 void runTaskSP(TaskList *taskList, char **array, int qtd, int type) {
     int n = qtd - 2, pid[n];
@@ -195,7 +286,7 @@ void runTaskSP(TaskList *taskList, char **array, int qtd, int type) {
         return;
     }
     for (int i=2; i<(qtd-1); i++) {
-        printf("%d ", i-2);
+        // printf("%d ", i-2);
         taskQueue[i-2] = findTask(taskList, array[i]);
         if (taskQueue[i-2] == NULL) {
             printf("Task nao encontrada na lista.\n");
@@ -206,7 +297,12 @@ void runTaskSP(TaskList *taskList, char **array, int qtd, int type) {
     }
     // printf("Achou as tasks\n");
 
-    for (int i=0; i<n; i++) {
+    // for (int i=0; i<(n-1); i++) {
+    //     printf("%s, ", taskQueue[i]->name);
+    // }
+    // printf("\n");
+
+    for (int i=0; i<(n-1); i++) {
         pid[i] = fork();
         if (pid[i] == -1) {
             printf("Erro ao executar o comando.\n");
@@ -252,7 +348,7 @@ void runTask(TaskList *taskList, char **array, int qtd) {
         runTaskSP(taskList, array, qtd, 1);
     }
     else if (strcmp(array[1], "pipe") == 0) {
-
+        runTaskPipe(taskList, array, qtd);
     }
     else {
         printf("Comando para run invalido.\n");
