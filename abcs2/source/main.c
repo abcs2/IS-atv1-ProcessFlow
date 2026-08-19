@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 #define INPUT_SIZE 100
 #define NAME_SIZE 20
@@ -102,10 +103,22 @@ char **getCommand(char *str, int qtd) {
     return array;
 }
 
+Task *findTask(TaskList *taskList, char *name) {
+    Task *aux = taskList->head, *task = NULL;
+    while (aux != NULL) {
+        if (strcmp(aux->name, name) == 0) {
+            task = aux;
+        }
+        aux = aux->next;
+    }
+    // printf("Retornando uma task\n");
+    return task;
+}
+
 
 void newTask(TaskList *taskList, char **array, int qtd) {
     if (qtd < 4) {
-        printf("Numero de comandos invalidos.\n");
+        printf("Quantidade invalida de argumentos.\n");
         return;
     }
 
@@ -174,26 +187,101 @@ void newTask(TaskList *taskList, char **array, int qtd) {
 }
 
 
+void runTaskSP(TaskList *taskList, char **array, int qtd, int type) {
+    int n = qtd - 2, pid[n];
+    Task **taskQueue = (Task **) malloc(n * sizeof(Task *));
+    if (taskQueue == NULL) {
+        printf("Erro ao executar o comando.\n");
+        return;
+    }
+    for (int i=2; i<(qtd-1); i++) {
+        printf("%d ", i-2);
+        taskQueue[i-2] = findTask(taskList, array[i]);
+        if (taskQueue[i-2] == NULL) {
+            printf("Task nao encontrada na lista.\n");
+            free(taskQueue);
+            taskQueue = NULL;
+            return;
+        }
+    }
+    // printf("Achou as tasks\n");
+
+    for (int i=0; i<n; i++) {
+        pid[i] = fork();
+        if (pid[i] == -1) {
+            printf("Erro ao executar o comando.\n");
+            free(taskQueue);
+            taskQueue = NULL;
+            return;
+        }
+
+        if (pid[i] == 0) {
+            // Processo filho
+            execvp(taskQueue[i]->command, taskQueue[i]->args);
+
+            printf("Comando nao encontrado.\n");
+            exit(1);
+        }
+        // Processo pai (sequencial)
+        if (type == 0) {
+            wait(NULL);
+        }
+    }
+    // Processo pai (paralelo)
+    if (type == 1) {
+        for (int i=0; i<n; i++) {
+            wait(NULL);
+        }
+    }
+
+    free(taskQueue);
+    taskQueue = NULL;
+    return;
+}
+
+void runTask(TaskList *taskList, char **array, int qtd) {
+    // qtd conta o NULL
+    if (qtd < 4) {
+        printf("Quantidade invalida de argumentos.\n");
+        return;
+    }
+    else if (strcmp(array[1], "sequential") == 0) {
+        runTaskSP(taskList, array, qtd, 0);
+    }
+    else if (strcmp(array[1], "parallel") == 0) {
+        runTaskSP(taskList, array, qtd, 1);
+    }
+    else if (strcmp(array[1], "pipe") == 0) {
+
+    }
+    else {
+        printf("Comando para run invalido.\n");
+    }
+
+    return;
+}
+
+
 void processString(TaskList *taskList, char *str) {
     int qtd = getQtd(str) + 1;
     // printf("%s\nQtd: %d + 1\n", str, qtd-1);
     char **array = getCommand(str, qtd);
 
-    printf("[");
-    for (int i=0; i<qtd; i++) {
-        if (array[i] != NULL) {
-            printf("%s, ", array[i]);
-        } else {
-            printf("NULL");
-        }
-    }
-    printf("]\n");
+    // printf("[");
+    // for (int i=0; i<qtd; i++) {
+    //     if (array[i] != NULL) {
+    //         printf("%s, ", array[i]);
+    //     } else {
+    //         printf("NULL");
+    //     }
+    // }
+    // printf("]\n");
 
     if (strcmp(array[0], "task") == 0) {
         newTask(taskList, array, qtd);
     }
     else if (strcmp(array[0], "run") == 0) {
-
+        runTask(taskList, array, qtd);
     }
 
     free(array);
