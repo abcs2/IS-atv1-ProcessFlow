@@ -9,6 +9,8 @@
 #define COMMAND_SIZE 30
 #define ARG_SIZE 30
 
+// TODO modo workflow
+
 
 typedef struct task {
 	char name[NAME_SIZE];
@@ -82,7 +84,7 @@ char **getCommand(char *str, int qtd) {
                 strcpy(auxString, "");
                 vIndex++;
             }
-        } else {
+        } else if (strlen(auxString) < NAME_SIZE) {
             aux2[0] = aux;
             // printf("Aux2: %s\n", aux2);
             strcat(auxString, aux2);
@@ -170,18 +172,18 @@ void newTask(TaskList *taskList, char **array, int qtd) {
         aux->next = task;
     }
 
-    // printf("Nome: %s\n", task->name);
-    // printf("Comando: %s\n", task->command);
-    // printf("Argumentos: ");
-    // for (int i=2; i<qtd; i++) {
-    //     if ((task->args)[i-2] != NULL) {
-    //         printf("%s, ", (task->args)[i-2]);
-    //     } else {
-    //         printf("NULL");
-    //     }
+    printf("Nome: %s\n", task->name);
+    printf("Comando: %s\n", task->command);
+    printf("Argumentos: ");
+    for (int i=2; i<qtd; i++) {
+        if ((task->args)[i-2] != NULL) {
+            printf("%s, ", (task->args)[i-2]);
+        } else {
+            printf("NULL");
+        }
         
-    // }
-    // printf("\n");
+    }
+    printf("\n");
 
     return;
 }
@@ -335,9 +337,39 @@ void runTaskSP(TaskList *taskList, char **array, int qtd, int type) {
     return;
 }
 
+void runTaskAlone(TaskList *taskList, char **array) {
+    int pid;
+    Task *task = findTask(taskList, array[1]);
+    if (task == NULL) {
+        printf("Task nao encontrada na lista.\n");
+        return;
+    }
+    // printf("Achou a task\n");
+
+    pid = fork();
+    if (pid == -1) {
+        printf("Erro ao executar o comando.\n");
+        return;
+    }
+
+    if (pid == 0) {
+        execvp(task->command, task->args);
+
+        printf("Comando nao encontrado.\n");
+        exit(1);
+    }
+
+    wait(NULL);
+
+    return;
+}
+
 void runTask(TaskList *taskList, char **array, int qtd) {
     // qtd conta o NULL
-    if (qtd < 4) {
+    if (qtd == 3) {
+        runTaskAlone(taskList, array);
+    }
+    else if (qtd < 4) {
         printf("Quantidade invalida de argumentos.\n");
         return;
     }
@@ -379,6 +411,9 @@ void processString(TaskList *taskList, char *str) {
     else if (strcmp(array[0], "run") == 0) {
         runTask(taskList, array, qtd);
     }
+    else {
+        printf("Comando invalido.\n");
+    }
 
     free(array);
     array = NULL;
@@ -403,7 +438,10 @@ int main(int argc, char** argv) {
         // Interativo
         while (1) {
             printf("processflow> ");
-            fgets(str, INPUT_SIZE, stdin);
+            if (fgets(str, INPUT_SIZE, stdin) == NULL) {
+                printf("\n");
+                return 0;
+            }
             str[strlen(str) - 1] = '\0';
 
             // Debug

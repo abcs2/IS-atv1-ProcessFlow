@@ -1,0 +1,1217 @@
+Script started on 2026-08-19 14:18:01-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="110" LINES="27"]
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ date
+[?2004lWed Aug 19 14:18:20 -03 2026
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ whoami
+[?2004lpori
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ echo ""e"s"s"e" "e" "m"e"u" "u"s"u"a"r"i"o" "m"a"s" "e"u" " [A]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs"o"u" "a"n"a" "b"r"[1P"e"a"t"r"i"z"
+[?2004lesse e meu usuario mas eu sou ana beatriz
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ pwd
+[?2004l/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow
+[?2004lmake: *** No rule to make target 'objects/main.o', needed by 'processflow'.  Stop.
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow
+[?2004lgcc -c source/main.c
+gcc objects/main.o -o processflow
+/usr/bin/ld: cannot find objects/main.o: No such file or directory
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:5: processflow] Error 1
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clena[K[Kan
+[?2004lrm -f *.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make cleanprocessflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflow
+[?2004lHello
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> aaaa aa
+Qtd: 1 + 1
+processflow> a
+Qtd: 0 + 1
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflow
+[?2004lprocessflow> aa  
+Qtd: 1 + 1
+processflow> ^[[A^[[A^[[B            exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflow
+[?2004lbash: ./processflow: No such file or directory
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflow[3Pmake clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[3P./processflow
+[?2004lprocessflow> fa fa fa
+Qtd: 3 + 1
+processflow> aaaa  
+Qtd: 2 + 1
+processflow> aaa 
+Qtd: 2 + 1
+processflow> a     
+Qtd: 2 + 1
+processflow> a
+Qtd: 1 + 1
+processflow>   a
+Qtd: 1 + 1
+processflow>  
+Qtd: 1 + 1
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[3P./processflow[3Pmake clean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> a
+Qtd: 2 + 1
+processflow> exiy t
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean./processflow[3Pmake clean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> a
+Qtd: 1 + 1
+processflow> aa
+Qtd: 1 + 1
+processflow> a a a
+Qtd: 3 + 1
+processflow> a a a 
+Qtd: 4 + 1
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflow
+[?2004lbash: ./processflow: No such file or directory
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflow[3Pmake clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[3P./processflow[3Pmake clean./processflow
+[?2004lprocessflow> a
+Qtd: 1 + 1
+processflow> aa 
+Qtd: 2 + 1
+processflow> aa
+Qtd: 1 + 1
+processflow> a 
+Qtd: 2 + 1
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[3P./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[3P./processflowmake processflow[3P./processflow[3Pmake clean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make cleanprocessflow[3P./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pcleanprocessflow[6Pcleanprocessflow[Kmake processflow[6Pcleanprocessflow[3P./processflow
+[?2004lprocessflow> a
+a
+Qtd: 1 + 1
+processflow> aa
+aa
+Qtd: 1 + 1
+processflow> aa 
+aa 
+Qtd: 2 + 1
+processflow> aa     
+aa     
+Qtd: 2 + 1
+processflow>  a
+ a
+Qtd: 1 + 1
+processflow> aa      a
+    a
+Qtd: 1 + 1
+processflow>    a 
+   a 
+Qtd: 2 + 1
+processflow> ^[[A    exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> a
+Prev:  a
+Qtd: 1 + 1
+processflow> aa
+Prev:  aa
+Qtd: 1 + 1
+processflow> a a a  
+Prev:  a a a
+Qtd: 3 + 1
+processflow>  a 
+Prev:   a 
+Qtd: 2 + 1
+processflow>  
+Prev:   
+Qtd: 1 + 1
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> e
+Prev:  e
+Qtd: 1 + 1
+processflow> ee
+Prev:  ee
+Qtd: 1 + 1
+processflow> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Prev:  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Qtd: 1 + 1
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> a
+Prev:  ; Aux: aPrev: a; Aux:  a
+Qtd: 1 + 1
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> hello
+Prev:  ; Aux: h
+Prev: h; Aux: e
+Prev: e; Aux: l
+Prev: l; Aux: l
+Prev: l; Aux: o
+Prev: o; Aux:  
+hello
+Qtd: 1 + 1
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflowmake processflow[3P./processflow
+[?2004lprocessflow> a
+a
+Qtd: 1 + 1
+processflow> aa
+aa
+Qtd: 1 + 1
+processflow> a 
+a 
+Qtd: 0 + 1
+processflow> a 
+a 
+Qtd: 0 + 1
+processflow> aa 
+aa 
+Qtd: 0 + 1
+processflow> a a 
+a a 
+Qtd: 1 + 1
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> a
+a
+Qtd: 1 + 1
+processflow> a 
+a 
+Qtd: 1 + 1
+processflow> aaa   
+aaa   
+Qtd: 1 + 1
+processflow> a a a a a     
+a a a a a     
+Qtd: 5 + 1
+processflow>    a a a a aaaaaaaa 
+   a a a a aaaaaaaa 
+Qtd: 5 + 1
+processflow> 
+processflow> 
+processflow> 
+processflow> 
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+[01m[Ksource/main.c:[m[K In function ‘[01m[KgetCommand[m[K’:
+[01m[Ksource/main.c:42:31:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kstrcat[m[K’ makes pointer from integer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   42 |             strcat(auxString, [01;35m[Kaux[m[K);
+      |                               [01;35m[K^~~[m[K
+      |                               [01;35m[K|[m[K
+      |                               [01;35m[Kchar[m[K
+In file included from [01m[Ksource/main.c:3[m[K:
+[01m[K/usr/include/string.h:149:70:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char * restrict[m[K’ but argument is of type ‘[01m[Kchar[m[K’
+  149 | extern char *strcat (char *__restrict __dest, [01;36m[Kconst char *__restrict __src[m[K)
+      |                                               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+[01m[Ksource/main.c:47:5:[m[K [01;35m[Kwarning: [m[Kargument 2 null where non-null expected [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+   47 |     [01;35m[Kstrcpy[m[K(array[qtd-1], NULL);
+      |     [01;35m[K^~~~~~[m[K
+[01m[K/usr/include/string.h:141:14:[m[K [01;36m[Knote: [m[Kin a call to function ‘[01m[Kstrcpy[m[K’ declared ‘[01m[Knonnull[m[K’
+  141 | extern char *[01;36m[Kstrcpy[m[K (char *__restrict __dest, const char *__restrict __src)
+      |              [01;36m[K^~~~~~[m[K
+[01m[Ksource/main.c:49:12:[m[K [01;35m[Kwarning: [m[Kreturning ‘[01m[Kchar (*)[20][m[K’ from a function with incompatible return type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   49 |     return [01;35m[Karray[m[K;
+      |            [01;35m[K^~~~~[m[K
+[01m[Ksource/main.c:49:12:[m[K [01;35m[Kwarning: [m[Kfunction returns address of local variable [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-local-addr-Wreturn-local-addr]8;;[m[K]
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ^[[A^[[A        exit[ 
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+[01m[Ksource/main.c:[m[K In function ‘[01m[KgetCommand[m[K’:
+[01m[Ksource/main.c:48:5:[m[K [01;35m[Kwarning: [m[Kargument 2 null where non-null expected [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnonnull-Wnonnull]8;;[m[K]
+   48 |     [01;35m[Kstrcpy[m[K(array[qtd-1], NULL);
+      |     [01;35m[K^~~~~~[m[K
+In file included from [01m[Ksource/main.c:3[m[K:
+[01m[K/usr/include/string.h:141:14:[m[K [01;36m[Knote: [m[Kin a call to function ‘[01m[Kstrcpy[m[K’ declared ‘[01m[Knonnull[m[K’
+  141 | extern char *[01;36m[Kstrcpy[m[K (char *__restrict __dest, const char *__restrict __src)
+      |              [01;36m[K^~~~~~[m[K
+[01m[Ksource/main.c:50:12:[m[K [01;35m[Kwarning: [m[Kreturning ‘[01m[Kchar (*)[20][m[K’ from a function with incompatible return type ‘[01m[Kchar **[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   50 |     return [01;35m[Karray[m[K;
+      |            [01;35m[K^~~~~[m[K
+[01m[Ksource/main.c:50:12:[m[K [01;35m[Kwarning: [m[Kfunction returns address of local variable [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-local-addr-Wreturn-local-addr]8;;[m[K]
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ^[[A    exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> aaa
+aaa
+Qtd: 1 + 1
+[aaaaaaa, NULL]
+processflow> aba
+aba
+Qtd: 1 + 1
+[abaaaba, NULL]
+processflow> ola ola   xau
+ola xau
+Qtd: 2 + 1
+[oloaolo, xaxuxax, NULL]
+processflow> a b c d e7 
+a b c d e
+Qtd: 5 + 1
+[a, b, c, d, e, NULL]
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> e
+e
+Qtd: 1 + 1
+[e, NULL]
+processflow> olaaa
+olaaa
+Qtd: 1 + 1
+*** stack smashing detected ***: terminated
+Aborted (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> aaa
+aaa
+Qtd: 1 + 1
+[aaaaaaa, NULL]
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ola
+ola
+Qtd: 1 + 1
+Copiei 
+[oloaolo, NULL]
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ola
+ola
+Qtd: 1 + 1
+Copiei oloaolo
+[oloaolo, NULL]
+processflow> ola ola
+ola ola
+Qtd: 2 + 1
+Copiei 
+Copiei oloaolo
+[oloaolo, oloaolo, NULL]
+processflow> olaaa
+olaaa
+Qtd: 1 + 1
+Copiei oloaoloaoloaoloaoloaoloaoloaolo
+*** stack smashing detected ***: terminated
+Aborted (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> 
+processflow> e
+e
+Qtd: 1 + 1
+Aux: e
+Copiei e
+[e, NULL]
+processflow> ele
+ele
+Qtd: 1 + 1
+Aux: e
+Aux: l
+Aux: e
+Copiei eleeele
+[eleeele, NULL]
+processflow> ^[[A^[[A        exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ele
+ele
+Qtd: 1 + 1
+Copiei ele
+[ele, NULL]
+processflow> ola
+ola
+Qtd: 1 + 1
+Copiei ola
+[ola, NULL]
+processflow> olaolaola
+olaolaola
+Qtd: 1 + 1
+Copiei olaolaola
+[olaolaola, NULL]
+processflow>  ola ola ola
+ ola ola ola
+Qtd: 3 + 1
+Copiei 
+Copiei 
+Copiei ola
+[ola, ola, ola, NULL]
+processflow> muita coisa
+muita coisa
+Qtd: 2 + 1
+Copiei 
+Copiei coisa
+[coisa, coisa, NULL]
+processflow> a b c d e
+a b c d e
+Qtd: 5 + 1
+Copiei 
+Copiei 
+Copiei 
+Copiei 
+Copiei e
+[e, e, e, e, e, NULL]
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> a e i
+Copiei a
+Copiei e
+Copiei i
+[i, i, i, NULL]
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> e a e i
+Copiei a
+Copiei e
+, anterior: eCopiei i
+[i, i, i, NULL]
+processflow> EXIT
+Copiei EXIT
+[EXIT, NULL]
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> a e i
+Copiei a
+Copiei e
+- Anterior: e
+Copiei i
+- Anterior: i
+[i, i, i, NULL]
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> a e i
+Copiei a
+Copiei e
+- Anterior: a
+Copiei i
+- Anterior: e
+[a, e, i, NULL]
+processflow>    gato goro do
+Copiei gato
+Copiei gordo
+- Anterior: gato
+[gato, gordo, NULL]
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> gato gorfo  do
+[gato, gordo, NULL]
+processflow> k    ko i     gordo      maggoo   oo    
+[ki, gordo, magoo, NULL]
+processflow> 
+processflow>  
+[NULL]
+processflow> miauuu
+[miauuu, NULL]
+processflow> a b c d e f g h    i j k l   
+[a, b, c, d, e, f, g, h, i, j, k, l, NULL]
+processflow> e alo
+[alo, NULL]
+processflow> 
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+[01m[Ksource/main.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Ksource/main.c:201:31:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[KprocessString[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+  201 |                 processString([01;35m[Kstr[m[K, taskList);
+      |                               [01;35m[K^~~[m[K
+      |                               [01;35m[K|[m[K
+      |                               [01;35m[Kchar *[m[K
+[01m[Ksource/main.c:147:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[KTaskList *[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+  147 | void processString([01;36m[KTaskList *taskList[m[K, char *str) {
+      |                    [01;36m[K~~~~~~~~~~^~~~~~~~[m[K
+[01m[Ksource/main.c:201:36:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[KprocessString[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+  201 |                 processString(str, [01;35m[KtaskList[m[K);
+      |                                    [01;35m[K^~~~~~~~[m[K
+      |                                    [01;35m[K|[m[K
+      |                                    [01;35m[KTaskList *[m[K
+[01m[Ksource/main.c:147:46:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar *[m[K’ but argument is of type ‘[01m[KTaskList *[m[K’
+  147 | void processString(TaskList *taskList, [01;36m[Kchar *str[m[K) {
+      |                                        [01;36m[K~~~~~~^~~[m[K
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ^[[A    exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ola ola
+[ola, ola, NULL]
+processflow> task ola bom dia
+[task, ola, bom, dia, NULL]
+Segmentation fault (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ola 
+[ola, NULL]
+processflow> task ola bom dia
+[task, ola, bom, dia, NULL]
+Segmentation fault (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task alo bom dia
+[task, alo, bom, dia, NULL]
+Segmentation fault (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ola   tas   a sk ola co  bom dia
+[task, ola, bom, dia, NULL]
+Antes do for arg
+Antes do strcpy
+Antes do strcpy
+Antes do strcpy
+Segmentation fault (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ola com       task ola bom dia
+[task, ola, bom, dia, NULL]
+Antes do for arg
+Antes do strcpy
+Antes do strcpy
+Antes do strcpy
+Depois do for arg
+Nome: task
+Comando: ola
+Argumentos:
+bom dia  
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> ola b     task ola bom dia
+[task, ola, bom, dia, NULL]
+Nome: ola
+Comando: bom
+Argumentos:
+Segmentation fault (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task ola bom dia
+[task, ola, bom, dia, NULL]
+Nome: ola
+Comando: bom
+Argumentos:
+dia  
+processflow> task gato gordo pop star luda  tador de mma   MMA
+[task, gato, gordo, pop, star, lutador, de, MMA, NULL]
+Nome: gato
+Comando: gordo
+Argumentos:
+pop star lutador de MMA  
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task gato gordo pop star luda  tador de MMA
+[task, gato, gordo, pop, star, lutador, de, MMA, NULL]
+Nome: gato
+Comando: gordo
+Argumentos:
+pop, star, lutador, de, MMA, , 
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task gatog  got rdo pop star lutador de MMA
+[task, gato, gordo, pop, star, lutador, de, MMA, NULL]
+Nome: gato
+Comando: gordo
+Argumentos: pop, star, lutador, de, MMA, NULL
+processflow> tasl k
+[task, NULL]
+Numero de comandos invalidos.
+processflow> task 1
+[task, 1, NULL]
+Numero de comandos invalidos.
+processflow> task 1 2
+[task, 1, 2, NULL]
+Nome: 1
+Comando: 2
+Argumentos: NULL
+processflow> allooooo
+[allooooo, NULL]
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task bom dia
+[task, bom, dia, NULL]
+Nome: bom
+Comando: dia
+Argumentos: NULL
+processflow> task olaaaaa bom dia
+[task, olaaaaa, bom, dia, NULL]
+Nome: olaaaaa
+Comando: bom
+Argumentos: dia, NULL
+processflow> task ok xauuuu  xau
+[task, ok, xauuuu, xau, NULL]
+Nome: ok
+Comando: xauuuu
+Argumentos: xau, NULL
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+[01m[Ksource/main.c:[m[K In function ‘[01m[KfindTask[m[K’:
+[01m[Ksource/main.c:108:31:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[Kstrcmp[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+  108 |         if (strcmp(aux->name, [01;35m[Kname[m[K) == 0) {
+      |                               [01;35m[K^~~~[m[K
+      |                               [01;35m[K|[m[K
+      |                               [01;35m[Kchar **[m[K
+In file included from [01m[Ksource/main.c:3[m[K:
+[01m[K/usr/include/string.h:156:50:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char *[m[K’ but argument is of type ‘[01m[Kchar **[m[K’
+  156 | extern int strcmp (const char *__s1, [01;36m[Kconst char *__s2[m[K)
+      |                                      [01;36m[K~~~~~~~~~~~~^~~~[m[K
+[01m[Ksource/main.c:[m[K In function ‘[01m[KrunTaskSP[m[K’:
+[01m[Ksource/main.c:196:50:[m[K [01;35m[Kwarning: [m[Kpassing argument 2 of ‘[01m[KfindTask[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+  196 |         taskQueue[i-2] = findTask(taskList, [01;35m[Karray[i][m[K);
+      |                                             [01;35m[K~~~~~^~~[m[K
+      |                                                  [01;35m[K|[m[K
+      |                                                  [01;35m[Kchar *[m[K
+[01m[Ksource/main.c:105:43:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar **[m[K’ but argument is of type ‘[01m[Kchar *[m[K’
+  105 | Task *findTask(TaskList *taskList, [01;36m[Kchar **name[m[K) {
+      |                                    [01;36m[K~~~~~~~^~~~[m[K
+[01m[Ksource/main.c:223:13:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kwait[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+  223 |             [01;35m[Kwait[m[K(NULL);
+      |             [01;35m[K^~~~[m[K
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow[3Pmake clean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make cleanprocessflow
+[?2004lgcc -c source/main.c -o objects/main.o
+[01m[Ksource/main.c:[m[K In function ‘[01m[KrunTaskSP[m[K’:
+[01m[Ksource/main.c:223:13:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kwait[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+  223 |             [01;35m[Kwait[m[K(NULL);
+      |             [01;35m[K^~~~[m[K
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pcleanprocessflow[Kmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make cleanprocessflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pcleanprocessflow[6Pcleanprocessflow[6Pcleanprocessflow[6Pcleanprocessflow[6Pclean./processflow
+[?2004lprocessflow> ola
+processflow> task mostrar ls
+Nome: mostrar
+Comando: ls
+Argumentos: NULL
+processflow> run sequential mostrar
+processflow> run
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ld s
+Nome: mostrar
+Comando: ls
+Argumentos: NULL
+processflow> run sequential mostrar
+Segmentation fault (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+Nome: mostrar
+Comando: ls
+Argumentos: NULL
+processflow> run re  sequential mostrar
+Segmentation fault (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+Nome: mostrar
+Comando: ls
+Argumentos: NULL
+processflow> run sequential mostrar
+Retornando uma task
+Segmentation fault (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+Nome: mostrar
+Comando: ls
+Argumentos: NULL
+processflow> run sequn ential mostrar
+0 Retornando uma task
+Achou as tasks
+Makefile  evidencias.log  objects  processflow	source
+processflow> task entrat rObj cd objects
+Nome: entrarObj
+Comando: cd
+Argumentos: objects, NULL
+processflow> u run sequential m entrarObj mostrar
+0 Retornando uma task
+1 Retornando uma task
+Achou as tasks
+Comando nao encontrado.
+Makefile  evidencias.log  objects  processflow	source
+processflow> run sequential aaaa mostrar
+0 Retornando uma task
+Task nao encontrada na lista.
+processflow> run sequential entrarObj
+0 Retornando uma task
+Achou as tasks
+Comando nao encontrado.
+processflow> task gotosource     rx   c cd sourtc  ce
+Nome: gotosrc
+Comando: cd
+Argumentos: source, NULL
+processflow> run sequential go  toso rc
+0 Retornando uma task
+Achou as tasks
+Comando nao encontrado.
+processflow> task qual  a  data date
+Nome: qualadata
+Comando: date
+Argumentos: NULL
+processflow> run sequential qualadata
+0 Retornando uma task
+Achou as tasks
+Wed Aug 19 17:34:25 -03 2026
+processflow> run sequential qualadata ls  mostrar
+0 Retornando uma task
+1 Retornando uma task
+Achou as tasks
+Wed Aug 19 17:34:41 -03 2026
+Makefile  evidencias.log  objects  processflow	source
+processflow> run parallel qualadata mostrar
+0 Retornando uma task
+1 Retornando uma task
+Achou as tasks
+Wed Aug 19 17:34:53 -03 2026
+Makefile  evidencias.log  objects  processflow	source
+processflow> ^[[A^[[A^[[B            run parallel qualadatamos    mostrar
+0 Retornando uma task
+1 Retornando uma task
+Achou as tasks
+Wed Aug 19 17:35:07 -03 2026
+Makefile  evidencias.log  objects  processflow	source
+processflow> task quem  soueu whoami
+Nome: quemsoueu
+Comando: whoami
+Argumentos: NULL
+processflow> ru  n sequential quemsoueu
+0 Retornando uma task
+Achou as tasks
+pori
+processflow> run parallel qual a  adata quemsoueu mostrar
+0 Retornando uma task
+1 Retornando uma task
+2 Retornando uma task
+Achou as tasks
+Wed Aug 19 17:35:51 -03 2026
+pori
+Makefile  evidencias.log  objects  processflow	source
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+[01m[Ksource/main.c:[m[K In function ‘[01m[KrunTaskPipe[m[K’:
+[01m[Ksource/main.c:257:32:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kclose[m[K’
+  257 |                 close(fd[i][0])
+      |                                [01;31m[K^[m[K
+      |                                [32m[K;[m[K
+  258 |                 [32m[Kclose[m[K(fd[i][1])
+      |                 [32m[K~~~~~[m[K           
+make: *** [Makefile:2: objects/main.o] Error 1
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make cleanprocessflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pcleanprocessflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+Nome: mostrar
+Comando: ls
+Argumentos: NULL
+processflow> task falar echo
+Nome: falar
+Comando: echo
+Argumentos: NULL
+processflow> run sequenri  tial faalr       mostrar falar
+Makefile  evidencias.log  objects  processflow	source
+
+0 1 processflow> run pu ipe mostrar falar
+processflow> task falao roi echo oi
+Nome: falaroi
+Comando: echo
+Argumentos: oi, NULL
+processflow> run parallel mostrar falaroi
+
+Makefile  evidencias.log  objects  processflow	source
+0 1 processflow> run parallel faal  laroi mostrar
+
+Makefile  evidencias.log  objects  processflow	source
+0 1 processflow> run sequential mostrar
+Makefile  evidencias.log  objects  processflow	source
+0 processflow> run sequne  ential falarou i
+
+0 processflow> run sequential mostrar
+Makefile  evidencias.log  objects  processflow	source
+0 processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflow
+[?2004lprocessflow> ru  n     task mostrar ls
+Nome: mostrar
+Comando: ls
+Argumentos: NULL
+processflow> run sequential mostrar
+Makefile  evidencias.log  objects  processflow	source
+0 processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflow
+[?2004lprocessflow> task echo oi
+Nome: echo
+Comando: oi
+Argumentos: NULL
+processflow> task falar echo oi
+Nome: falar
+Comando: echo
+Argumentos: oi, NULL
+processflow> ru  n sequential falar
+
+0 processflow> ecit   xit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task falar echo oi
+processflow> run re  sequnr  ential falar
+
+processflow> task mostrat   r ls
+processflow> run requential mostrar
+Comando para run invalido.
+processflow> run sequential mostrar
+Makefile  evidencias.log  objects  processflow	source
+processflow> task acharev gre  p evidencias.log
+processflow> run pipe mostrar acharev
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task task      mostrar ls
+processflow> task acharev grep evidencias.loc g
+processflow> run pipe mostrar acharev
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> tasl k mostrar s ls
+processflow> task acharev gre  p evidencias.log
+processflow> run pipe mostrar acharev
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+processflow> task acharev grep evidencias.log
+processflow> run pipe mostrar acharev
+processflow> exit    ESQUECI DE COLOCA R A FUNCAO PR A  A RODAR             NO CODIGO^[[D     O^[[D     O
+processflow> E exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+processflow> task acharev gre- p evidencias.log
+processflow> run pipe mosr r trar acharev
+Usage: evidencias.log [OPTION]... PATTERNS [FILE]...
+Try 'evidencias.log --help' for more information.
+processflow> run pipe mostrar
+processflow> run sequential mostrar
+Makefile  evidencias.log  objects  processflow	source
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> tas  k mostrar ls
+processflow> task acharev grep evidenl cias.log
+processflow> run pipe mostrar acharev
+0: Ler o index -1
+0: Escrever para o index 0
+1: Ler o index 0
+1: Escrever para o index 1
+2: Ler o index 1
+2: Escrever para o index 2
+Usage: evidencias.log [OPTION]... PATTERNS [FILE]...
+Try 'evidencias.log --help' for more information.
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+Nome: mostrar
+Comando: ls
+Argumentos: NULL
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+Nome: mostrar
+Comando: ls
+Argumentos: ls, NULL
+processflow> ru  n parallel l mostrar
+mostrar, (null), 
+Makefile  evidencias.log  objects  processflow	source
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> mas   task mostrar ls
+Nome: mostrar
+Comando: ls
+Argumentos: ls, NULL
+processflow> task acharev grep evidencias.log
+Nome: acharev
+Comando: grep
+Argumentos: grep, evidencias.log, NULL
+processflow> run pipe mostrar ar charev
+mostrar, acharev, (null), 
+0: Escrever para o index 0
+1: Ler o index 0
+1: Escrever para o index 1
+processflow> e exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+processflow> task acharev grep evidencias.log
+processflow> run pipe mostrar acharev
+0: Escrever para o index 0
+1: Ler o index 0
+evidencias.log
+^X^C
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+processflow> trask      ask acharev grep evidencias.log
+processflow> run pipe mostrar acharev
+0: Escrever para o index 0
+1: Ler o index 0
+evidencias.log
+Esperou por um processo
+^C
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+processflow> task achaa rev grep evidencias.log
+processflow> run pipe mostrar acharev
+0: Closed fd[0][1]
+1: Closed fd[0][0]
+evidencias.log
+Esperou por um processo
+^C
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar s ls
+processflow> task acharev gre  p evien  dencias.log
+processflow> run pipe mst  ostrar acharev
+0: Closed fd[0][0]
+0: Closed fd[0][1]
+1: Closed fd[0][1]
+1: Closed fd[0][0]
+evidencias.log
+Esperou por um processo
+Esperou por um processo
+Esperou por um processo
+processflow> eeeeeeeeeeeeeeeeeeeeeeeeee
+*** stack smashing detected ***: terminated
+Aborted (core dumped)
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task mostrar ls
+processflow> task achare  v grep evidencias.log
+processflow> run pipe mostrar acharev
+0: Closed fd[0][1]
+1: Closed fd[0][0]
+evidencias.log
+processflow> run pipe mostrar
+Makefile  evidencias.log  objects  processflow	source
+processflow> tasl    task sequential acharev
+processflow> run r sequential acharev
+^C
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ grep evidencias.log
+[?2004l^C
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ grep evidencias.log[6P./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make cleangrep evidencias.log[6P./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+^[[Agcc objects/main.o -o processflow
+^[[A[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pcleangrep evidencias.log[6P./processflow
+[?2004lprocessflow> task mostrar ls
+processflow> run mostrar
+Makefile  evidencias.log  objects  processflow	source
+processflow> run mi oos  strar aaa
+Comando para run invalido.
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean[Kmake clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> aaa
+processflow> [?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> aaa
+Comando invalido.
+processflow> iiiiiiiiiaaaaaaaaa
+Comando invalido.
+processflow> 
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Comando invalido.
+processflow> aaaaa
+Comando invalido.
+processflow> run a     task aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Quantidade invalida de argumentos.
+processflow> task aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+processflow> Comando invalido.
+processflow> r task a a a 
+processflow> task aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa7 
+processflow> task     aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa a a a
+Quantidade invalida de argumentos.
+processflow> Comando invalido.
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow[6Pclean./processflow
+[?2004lprocessflow> task aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+processflow> Comando invalido.
+processflow> task a a a
+processflow> task aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaa
+processflow> exit
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ ./processflowmake processflow[6Pclean
+[?2004lrm -f objects/*.o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make clean./processflowmake processflow
+[?2004lgcc -c source/main.c -o objects/main.o
+gcc objects/main.o -o processflow
+[?2004h]0;pori@LAPTOP-DK71SMK3: /mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[01;32mpori@LAPTOP-DK71SMK3[00m:[01;34m/mnt/c/eu/aaa/infrasoft/atv1/IS-atv1-ProcessFlow/abcs2[00m$ make processflow
