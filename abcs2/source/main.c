@@ -72,18 +72,22 @@ char **getCommand(char *str, int qtd) {
         }
     }
 
-    while (str[sIndex] != '\0') {
+    while (str[sIndex] != '\0' && str[sIndex] != '\n') {
         aux = str[sIndex];
         if (aux == ' ') {
             if (prev != ' ' && vIndex < (qtd-1)) {
                 strcpy(array[vIndex], auxString);
-                // printf("Copiei %s\n", array[vIndex]);
+
+                // printf("Copiei %s no index %d\n", array[vIndex], vIndex);
                 // if (vIndex > 0) {
                 //     printf("- Anterior: %s\n", array[vIndex-1]);
                 // }
                 strcpy(auxString, "");
                 vIndex++;
             }
+
+        } else if (aux == '\n') {
+            // printf("Quebra de linha encontrada (%d)\n", sIndex);
         } else if (strlen(auxString) < NAME_SIZE) {
             aux2[0] = aux;
             // printf("Aux2: %s\n", aux2);
@@ -94,13 +98,31 @@ char **getCommand(char *str, int qtd) {
         sIndex++;
     }
     if (strlen(auxString) > 0 && vIndex < (qtd-1)) {
+        // for (int i=0; i<strlen(auxString); i++) {
+        //     if (auxString[i] == '\n') {
+        //         printf("/n a a a a a a a");
+        //     } else if (auxString[i] == '\0') {
+        //         printf("/0 a a a a a a a");
+        //     } else {
+        //         printf("%c", auxString[i]);
+        //     }
+        // }
+        // printf("\n");
+
+        // auxString[strlen(auxString) - 1] = '\0';
         strcpy(array[vIndex], auxString);
-        // printf("Copiei %s\n", array[vIndex]);
+        // printf("Copiei %s no index %d\n", array[vIndex], vIndex);
         // if (vIndex > 0) {
         //     printf("- Anterior: %s\n", array[vIndex-1]);
         // }
     }
     array[qtd-1] = NULL;
+
+    // for (int i=0; i<(qtd-1); i++) {
+
+    //     printf("%s, ", array[i]);
+    // }
+    // printf("\n");
 
     return array;
 }
@@ -172,18 +194,18 @@ void newTask(TaskList *taskList, char **array, int qtd) {
         aux->next = task;
     }
 
-    printf("Nome: %s\n", task->name);
-    printf("Comando: %s\n", task->command);
-    printf("Argumentos: ");
-    for (int i=2; i<qtd; i++) {
-        if ((task->args)[i-2] != NULL) {
-            printf("%s, ", (task->args)[i-2]);
-        } else {
-            printf("NULL");
-        }
+    // printf("Nome: %s\n", task->name);
+    // printf("Comando: %s\n", task->command);
+    // printf("Argumentos: ");
+    // for (int i=2; i<qtd; i++) {
+    //     if ((task->args)[i-2] != NULL) {
+    //         printf("%s, ", (task->args)[i-2]);
+    //     } else {
+    //         printf("NULL");
+    //     }
         
-    }
-    printf("\n");
+    // }
+    // printf("\n");
 
     return;
 }
@@ -392,7 +414,7 @@ void runTask(TaskList *taskList, char **array, int qtd) {
 
 void processString(TaskList *taskList, char *str) {
     int qtd = getQtd(str) + 1;
-    // printf("%s\nQtd: %d + 1\n", str, qtd-1);
+    // printf("Qtd: %d + 1\n", qtd-1);
     char **array = getCommand(str, qtd);
 
     // printf("[");
@@ -440,23 +462,49 @@ int main(int argc, char** argv) {
             printf("processflow> ");
             if (fgets(str, INPUT_SIZE, stdin) == NULL) {
                 printf("\n");
-                return 0;
+                break;
             }
             str[strlen(str) - 1] = '\0';
 
-            // Debug
             if (strcmp(str, "exit") == 0) {
                 break;
             }
-            //
-
-            if (strcmp(str, "") != 0) {
+            else if (strlen(str) > 0) {
                 processString(taskList, str);
             }
         }
     }
     else if (argc == 2) {
         // Workflow
+        FILE *arq = fopen(argv[1], "r");
+        if (arq == NULL) {
+            printf("Falha ao abrir o arquivo.\n");
+            return 0;
+        }
+        while (1) {
+            if (fgets(str, INPUT_SIZE, arq) == NULL) {
+                break;
+            }
+            str[strcspn(str, "\r\n")] = '\0';
+            // printf("Strlen: %ld\n", strlen(str));
+            // printf("(%c)\n", str[strlen(str) - 1]);
+            // str[strlen(str) - 1] = '\0';
+            // str[strcspn(str, "\n")] = '\0';
+
+            // if (strlen(str) < INPUT_SIZE) {
+            //     str[strlen(str)] = '\0';
+            // } else {
+            //     str[strlen(str) - 1] = '\0';
+            // }
+            
+            if (strcmp(str, "exit") == 0) {
+                break;
+            }
+            else if (strlen(str) > 2) {
+                printf("%s\n", str);
+                processString(taskList, str);
+            }
+        }
     }
 
     freeTaskList(taskList->head);
