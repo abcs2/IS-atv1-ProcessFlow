@@ -218,6 +218,17 @@ void newTask(TaskList *taskList, char **array, int qtd) {
 }
 
 
+void changeDirectory(char **array, int qtd) {
+    if (qtd != 3) {
+        printf("Numero de argumentos invalido.\n");
+        return;
+    }
+    if (chdir(array[1]) == -1) {
+        printf("Diretorio nao encontrado.\n");
+    }
+}
+
+
 void changeTaskIO(TaskList *taskList, char **array, char *ioType, int qtd) {
     if (qtd != 4) {
         printf("Numero invalido de argumentos.\n");
@@ -251,10 +262,10 @@ int changeIO(Task *task, int read, int write) {
     }
     if (strcmp(task->output, "") != 0 && write == 1) {
         if (strcmp(task->ioType, "w") == 0) {
-            arq2 = open(task->output, O_WRONLY, 0777);
+            arq2 = open(task->output, O_WRONLY | O_CREAT, 0777);
         }
         else if (strcmp(task->ioType, "a") == 0) {
-            arq2 = open(task->output, O_WRONLY | O_APPEND, 0777);
+            arq2 = open(task->output, O_WRONLY | O_APPEND | O_CREAT, 0777);
         }
         if (arq2 == -1) {
             printf("Arquivo de saida nao encontrado.\n");
@@ -493,6 +504,9 @@ void runTask(TaskList *taskList, char **array, int qtd) {
 void processString(TaskList *taskList, char *str) {
     int qtd = getQtd(str) + 1;
     // printf("Qtd: %d + 1\n", qtd-1);
+    if (qtd < 2) {
+        return;
+    }
     char **array = getCommand(str, qtd);
 
     // printf("[");
@@ -520,6 +534,9 @@ void processString(TaskList *taskList, char *str) {
     else if (strcmp(array[0], "append") == 0) {
         changeTaskIO(taskList, array, "a", qtd);
     }
+    else if (strcmp(array[0], "workdir") == 0) {
+        changeDirectory(array, qtd);
+    }
     else {
         printf("Comando invalido.\n");
     }
@@ -542,7 +559,7 @@ int main(int argc, char** argv) {
     }
     taskList->head = NULL;
     char str[INPUT_SIZE], aux[INPUT_SIZE];
-    int qtd = 0, i = 0;
+    int qtd = 0;
 
     if (argc == 1) {
         // Interativo
@@ -572,10 +589,15 @@ int main(int argc, char** argv) {
             return 0;
         }
         while ((fgets(aux, INPUT_SIZE, arq) != NULL)) {
+            // printf("Comeco while\n");
             qtd++;
-            if (strcmp(str, "exit") == 0) {
+            if (strcspn(aux, "\r\n") < strlen(aux)) {
+                aux[strcspn(aux, "\r\n")] = '\0';
+            }
+            if (strcmp(aux, "exit") == 0) {
                 break;
             }
+            // printf("Fim while\n");
         }
         if (qtd == 0) {
             free(taskList);
@@ -586,40 +608,28 @@ int main(int argc, char** argv) {
         char inputArray[qtd][INPUT_SIZE];
         rewind(arq);
 
-        while ((fgets(str, INPUT_SIZE, arq) != NULL)) {
-            str[strcspn(str, "\r\n")] = '\0';
+        for (int i=0; i<qtd; i++) {
+            // printf("Comeco if 1\n");
+            fgets(str, INPUT_SIZE, arq);
+            if (strcspn(str, "\r\n") < strlen(str)) {
+                str[strcspn(str, "\r\n")] = '\0';
+            }
             strcpy(inputArray[i], str);
-            i++;
+            // printf("Fim if 1\n");
         }
 
         fclose(arq);
 
         for (int i=0; i<qtd; i++) {
-            if (strlen(inputArray[i]) > 2) {
+            // printf("Comeco if 2\n");
+            if (strlen(inputArray[i]) > 0) {
                 printf("%s\n", inputArray[i]);
-                processString(taskList, inputArray[i]);
+                if (strcmp(inputArray[i], "exit") != 0) {
+                    processString(taskList, inputArray[i]);
+                }
             }
+            // printf("Fim if 2\n");
         }
-            
-            // printf("Strlen: %ld\n", strlen(str));
-            // printf("(%c)\n", str[strlen(str) - 1]);
-            // str[strlen(str) - 1] = '\0';
-            // str[strcspn(str, "\n")] = '\0';
-
-            // if (strlen(str) < INPUT_SIZE) {
-            //     str[strlen(str)] = '\0';
-            // } else {
-            //     str[strlen(str) - 1] = '\0';
-            // }
-            
-        //     if (strcmp(str, "exit") == 0) {
-        //         break;
-        //     }
-        //     else if (strlen(str) > 2) {
-        //         printf("%s\n", str);
-        //         processString(taskList, str);
-        //     }
-        // }
     }
 
     freeTaskList(taskList->head);

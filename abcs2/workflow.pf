@@ -1,6 +1,7 @@
 task mostrar ls
-task acharev grep evidencias.log
-append mostrar said.txt
-append acharev said.txt
-run pipe mostrar acharev
-run pipe mostrar acharev
+run mostrar
+workdir source
+run mostrar
+workdir source
+workdir ..
+run mostrar
