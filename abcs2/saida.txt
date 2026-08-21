@@ -1,0 +1,157 @@
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Fri Aug 21 12:19:26 -03 2026
+Fri Aug 21 12:19:26 -03 2026
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Fri Aug 21 12:20:10 -03 2026
+Fri Aug 21 12:20:10 -03 2026
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+evidencias.log
+evidencias.log
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Fri Aug 21 12:21:00 -03 2026
+Fri Aug 21 12:21:00 -03 2026
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+evidencias.log
+evidencias.log
+evidencias.log
+evidencias.log
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Fri Aug 21 12:21:30 -03 2026
+Fri Aug 21 12:21:30 -03 2026
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+evidencias.log
+evidencias.log
+evidencias.log
+evidencias.log
+evidencias.log
+evidencias.log
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:11 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Fri Aug 21 12:51:12 -03 2026
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Fri Aug 21 12:53:31 -03 2026
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Fri Aug 21 12:53:31 -03 2026
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Fri Aug 21 12:53:31 -03 2026
+Fri Aug 21 12:59:25 -03 2026
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+Fri Aug 21 12:59:44 -03 2026
+Makefile
+evidencias.log
+objects
+processflow
+saida.txt
+source
+workflow.pf
+evidencias.log
+evidencias.log

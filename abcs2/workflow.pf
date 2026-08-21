@@ -1,6 +1,6 @@
 task mostrar ls
 task acharev grep evidencias.log
-run gato
+append mostrar said.txt
+append acharev said.txt
 run pipe mostrar acharev
-exit
-aaa
+run pipe mostrar acharev

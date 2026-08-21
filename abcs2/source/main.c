@@ -3,19 +3,23 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <fcntl.h>
 
 #define INPUT_SIZE 100
 #define NAME_SIZE 30
 #define COMMAND_SIZE 30
 #define ARG_SIZE 30
 
-// TODO modo workflow
-
 
 typedef struct task {
 	char name[NAME_SIZE];
 	char command[COMMAND_SIZE];
 	char** args;
+
+    char input[NAME_SIZE];
+    char output[NAME_SIZE];
+    char ioType[2];
+
 	struct task *next;
 } Task;
 
@@ -182,6 +186,9 @@ void newTask(TaskList *taskList, char **array, int qtd) {
         }
     }
     // printf("Depois do for arg\n");
+    strcpy(task->input, "");
+    strcpy(task->output, "");
+    strcpy(task->ioType, "");
     task->next = NULL;
 
     if (taskList->head == NULL) {
@@ -211,9 +218,59 @@ void newTask(TaskList *taskList, char **array, int qtd) {
 }
 
 
+void changeTaskIO(TaskList *taskList, char **array, char *ioType, int qtd) {
+    if (qtd != 4) {
+        printf("Numero invalido de argumentos.\n");
+        return;
+    }
+    Task *task = findTask(taskList, array[1]);
+    if (task == NULL) {
+        printf("Task nao encontrada na lista.\n");
+        return;
+    }
+    if (strcmp(ioType, "r") == 0) {
+        strcpy(task->input, array[2]);
+    } else if (strcmp(ioType, "w") == 0 || strcmp(ioType, "a") == 0) {
+        strcpy(task->output, array[2]);
+    }
+    strcpy(task->ioType, ioType);
+
+    return;
+}
+
+int changeIO(Task *task, int read, int write) {
+    int arq1 = -1, arq2 = -1;
+    if (strcmp(task->input, "") != 0 && read == 1) {
+        arq1 = open(task->input, O_RDONLY, 0777);
+        if (arq1 == -1) {
+            printf("Arquivo de entrada nao encontrado.\n");
+            return -1;
+        }
+        dup2(arq1, STDIN_FILENO);
+        close(arq1);
+    }
+    if (strcmp(task->output, "") != 0 && write == 1) {
+        if (strcmp(task->ioType, "w") == 0) {
+            arq2 = open(task->output, O_WRONLY, 0777);
+        }
+        else if (strcmp(task->ioType, "a") == 0) {
+            arq2 = open(task->output, O_WRONLY | O_APPEND, 0777);
+        }
+        if (arq2 == -1) {
+            printf("Arquivo de saida nao encontrado.\n");
+            return -1;
+        }
+        dup2(arq2, STDOUT_FILENO);
+        close(arq2);
+    }
+
+    return 0;
+}
+
+
 void runTaskPipe(TaskList *taskList, char **array, int qtd) {
     int n = qtd - 2, pid[n];
-    int fd[n-2][2], readIndex, writeIndex;
+    int fd[n-2][2], readIndex, writeIndex, read, write;
     Task **taskQueue = (Task **) malloc(n * sizeof(Task *));
     if (taskQueue == NULL) {
         printf("Erro ao executar o comando.\n");
@@ -257,6 +314,8 @@ void runTaskPipe(TaskList *taskList, char **array, int qtd) {
             // Processo filho
             readIndex = i - 1;
             writeIndex = i;
+            read = (readIndex > -1)? 1 : 0;
+            write = (writeIndex < (n-2))? 1 : 0;
 			for (int j=0; j<(n-2); j++) {
 				if (j != readIndex) {
 					close(fd[j][0]);
@@ -267,14 +326,19 @@ void runTaskPipe(TaskList *taskList, char **array, int qtd) {
                     // printf("%d: Closed fd[%d][1]\n", i, j);
 				}
 			}
+            if (changeIO(taskQueue[i], !read, !write) == -1) {
+                free(taskQueue);
+                taskQueue = NULL;
+                exit(1);
+            }
 
-			if (readIndex > -1) {
+			if (read == 1) {
                 // printf("%d: Ler o index %d\n", i, readIndex);
                 // printf("%d: Closed fd[%d][0]\n", i, readIndex);
 				dup2(fd[readIndex][0], STDIN_FILENO);
 				close(fd[readIndex][0]);
 			}
-			if (writeIndex < (n-2)) {
+			if (write == 1) {
                 // printf("%d: Escrever para o index %d\n", i, writeIndex);
                 // printf("%d: Closed fd[%d][1]\n", i, writeIndex);
 				dup2(fd[writeIndex][1], STDOUT_FILENO);
@@ -284,6 +348,8 @@ void runTaskPipe(TaskList *taskList, char **array, int qtd) {
             execvp(taskQueue[i]->command, taskQueue[i]->args);
 
             printf("Comando nao encontrado.\n");
+            free(taskQueue);
+            taskQueue = NULL;
             exit(1);
         }
     }
@@ -337,9 +403,17 @@ void runTaskSP(TaskList *taskList, char **array, int qtd, int type) {
 
         if (pid[i] == 0) {
             // Processo filho
+            if (changeIO(taskQueue[i], 1, 1) == -1) {
+                free(taskQueue);
+                taskQueue = NULL;
+                exit(1);
+            }
+
             execvp(taskQueue[i]->command, taskQueue[i]->args);
 
             printf("Comando nao encontrado.\n");
+            free(taskQueue);
+            taskQueue = NULL;
             exit(1);
         }
         // Processo pai (sequencial)
@@ -375,6 +449,10 @@ void runTaskAlone(TaskList *taskList, char **array) {
     }
 
     if (pid == 0) {
+        if (changeIO(task, 1, 1) == -1) {
+            exit(1);
+        }
+
         execvp(task->command, task->args);
 
         printf("Comando nao encontrado.\n");
@@ -433,6 +511,15 @@ void processString(TaskList *taskList, char *str) {
     else if (strcmp(array[0], "run") == 0) {
         runTask(taskList, array, qtd);
     }
+    else if (strcmp(array[0], "input") == 0) {
+        changeTaskIO(taskList, array, "r", qtd);
+    }
+    else if (strcmp(array[0], "output") == 0) {
+        changeTaskIO(taskList, array, "w", qtd);
+    }
+    else if (strcmp(array[0], "append") == 0) {
+        changeTaskIO(taskList, array, "a", qtd);
+    }
     else {
         printf("Comando invalido.\n");
     }
@@ -454,7 +541,8 @@ int main(int argc, char** argv) {
         return 1;
     }
     taskList->head = NULL;
-    char str[INPUT_SIZE];
+    char str[INPUT_SIZE], aux[INPUT_SIZE];
+    int qtd = 0, i = 0;
 
     if (argc == 1) {
         // Interativo
@@ -479,13 +567,40 @@ int main(int argc, char** argv) {
         FILE *arq = fopen(argv[1], "r");
         if (arq == NULL) {
             printf("Falha ao abrir o arquivo.\n");
+            free(taskList);
+            taskList = NULL;
             return 0;
         }
-        while (1) {
-            if (fgets(str, INPUT_SIZE, arq) == NULL) {
+        while ((fgets(aux, INPUT_SIZE, arq) != NULL)) {
+            qtd++;
+            if (strcmp(str, "exit") == 0) {
                 break;
             }
+        }
+        if (qtd == 0) {
+            free(taskList);
+            taskList = NULL;
+            return 0;
+        }
+
+        char inputArray[qtd][INPUT_SIZE];
+        rewind(arq);
+
+        while ((fgets(str, INPUT_SIZE, arq) != NULL)) {
             str[strcspn(str, "\r\n")] = '\0';
+            strcpy(inputArray[i], str);
+            i++;
+        }
+
+        fclose(arq);
+
+        for (int i=0; i<qtd; i++) {
+            if (strlen(inputArray[i]) > 2) {
+                printf("%s\n", inputArray[i]);
+                processString(taskList, inputArray[i]);
+            }
+        }
+            
             // printf("Strlen: %ld\n", strlen(str));
             // printf("(%c)\n", str[strlen(str) - 1]);
             // str[strlen(str) - 1] = '\0';
@@ -497,14 +612,14 @@ int main(int argc, char** argv) {
             //     str[strlen(str) - 1] = '\0';
             // }
             
-            if (strcmp(str, "exit") == 0) {
-                break;
-            }
-            else if (strlen(str) > 2) {
-                printf("%s\n", str);
-                processString(taskList, str);
-            }
-        }
+        //     if (strcmp(str, "exit") == 0) {
+        //         break;
+        //     }
+        //     else if (strlen(str) > 2) {
+        //         printf("%s\n", str);
+        //         processString(taskList, str);
+        //     }
+        // }
     }
 
     freeTaskList(taskList->head);
