@@ -1,7 +1,16 @@
 task mostrar ls
-run mostrar
-workdir source
-run mostrar
-workdir source
-workdir ..
-run mostrar
+task data date
+start mostrar
+start data
+jobs
+wait 1
+jobs
+wait 2
+start mostrar
+start data
+wait 4
+start mostrar
+start mostrar
+start data
+start data
+exit

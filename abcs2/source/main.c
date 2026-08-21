@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <fcntl.h>
+#include <signal.h>
 
 #define INPUT_SIZE 100
 #define NAME_SIZE 30
@@ -27,6 +28,15 @@ typedef struct {
 	Task *head;
 } TaskList;
 
+typedef struct job {
+    int id;
+    int pid;
+    struct job *next;
+} Job;
+
+typedef struct {
+    Job *head;
+} JobList;
 
 void freeTaskList(Task *task) {
     if (task == NULL) {
@@ -279,6 +289,143 @@ int changeIO(Task *task, int read, int write) {
 }
 
 
+Job *findJob(JobList *jobList, int id) {
+    Job *aux = jobList->head;
+    if (aux == NULL) {
+        return NULL;
+    }
+    while (aux != NULL) {
+        if (aux->id == id) {
+            return aux;
+        }
+        aux = aux->next;
+    }
+    return NULL;
+}
+
+void waitJob(JobList *jobList, char **array, int qtd) {
+    Job *job, *aux = jobList->head;
+    int id;
+    if (qtd != 3) {
+        printf("Numero de argumentos invalido.\n");
+        return;
+    }
+    id = atoi(array[1]);
+    if (id == 0) {
+        printf("Nao ha um job com esse ID na lista.\n");
+        return;
+    }
+    job = findJob(jobList, id);
+    if (job == NULL) {
+        printf("Nao ha um job com esse ID na lista.\n");
+        return;
+    }
+
+    kill(job->pid, SIGCONT);
+    waitpid(job->pid, NULL, 0);
+
+    if (aux == job) {
+        jobList->head = job->next;
+    } else {
+        while (aux->next != job) {
+            aux = aux->next;
+        }
+        aux->next = job->next;
+    }
+    free(job);
+    job = NULL;
+
+    return;
+}
+
+void waitJobsFinal(Job *job) {
+    if (job == NULL) {
+        return;
+    }
+    waitJobsFinal(job->next);
+
+    kill(job->pid, SIGKILL);
+    waitpid(job->pid, NULL, 0);
+    free(job);
+    job = NULL;
+
+    return;
+}
+
+void listJobs(JobList *jobList, int qtd) {
+    Job *aux = jobList->head;
+    if (qtd != 2) {
+        printf("Numero de argumentos invalido.\n");
+        return;
+    }
+    if (aux == NULL) {
+        printf("Ainda nao ha jobs iniciados.\n");
+        return;
+    }
+    while (aux != NULL) {
+        printf("[%d] %d\n", aux->id, aux->pid);
+        aux = aux->next;
+    }
+    return;
+}
+
+void startJob(TaskList *taskList, JobList *jobList, char **array, int *id, int qtd) {
+    Task *task;
+    int pid;
+    if (qtd != 3) {
+        printf("Numero de argumentos invalido.\n");
+        return;
+    }
+    task = findTask(taskList, array[1]);
+    if (task == NULL) {
+        printf("Task nao encontrada na lista.\n");
+        return;
+    }
+    // printf("Achou a task\n");
+
+    pid = fork();
+    if (pid == -1) {
+        printf("Erro ao comecar o job.\n");
+        return;
+    }
+
+    if (pid == 0) {
+        if (changeIO(task, 1, 1) == -1) {
+            exit(1);
+        }
+
+        execvp(task->command, task->args);
+
+        printf("Comando nao encontrado.\n");
+        exit(1);
+    }
+
+    kill(pid, SIGSTOP);
+    Job *job = (Job *) malloc(sizeof(Job)), *aux;
+    if (job == NULL) {
+        printf("Erro ao comecar o job.\n");
+        kill(pid, SIGKILL);
+        return;
+    }
+    job->id = (*id)++;
+    job->pid = pid;
+    job->next = NULL;
+
+    if (jobList->head == NULL) {
+        jobList->head = job;
+    } else {
+        aux = jobList->head;
+        while (aux->next != NULL) {
+            aux = aux->next;
+        }
+        aux->next = job;
+    }
+    printf("[%d] %d\n", job->id, job->pid);
+
+    return;
+}
+
+
 void runTaskPipe(TaskList *taskList, char **array, int qtd) {
     int n = qtd - 2, pid[n];
     int fd[n-2][2], readIndex, writeIndex, read, write;
@@ -501,7 +648,7 @@ void runTask(TaskList *taskList, char **array, int qtd) {
 }
 
 
-void processString(TaskList *taskList, char *str) {
+void processString(TaskList *taskList, JobList *jobList, char *str, int *jobId) {
     int qtd = getQtd(str) + 1;
     // printf("Qtd: %d + 1\n", qtd-1);
     if (qtd < 2) {
@@ -537,6 +684,15 @@ void processString(TaskList *taskList, char *str) {
     else if (strcmp(array[0], "workdir") == 0) {
         changeDirectory(array, qtd);
     }
+    else if (strcmp(array[0], "start") == 0) {
+        startJob(taskList, jobList, array, jobId, qtd);
+    }
+    else if (strcmp(array[0], "jobs") == 0) {
+        listJobs(jobList, qtd);
+    }
+    else if (strcmp(array[0], "wait") == 0) {
+        waitJob(jobList, array, qtd);
+    }
     else {
         printf("Comando invalido.\n");
     }
@@ -558,8 +714,16 @@ int main(int argc, char** argv) {
         return 1;
     }
     taskList->head = NULL;
+    JobList *jobList = (JobList *) malloc(sizeof(JobList));
+    if (jobList == NULL) {
+        printf("Falha ao comecar o programa.\n");
+        free(taskList);
+        taskList = NULL;
+        return 1;
+    }
+    jobList->head = NULL;
     char str[INPUT_SIZE], aux[INPUT_SIZE];
-    int qtd = 0;
+    int qtd = 0, jobId = 1;
 
     if (argc == 1) {
         // Interativo
@@ -575,7 +739,7 @@ int main(int argc, char** argv) {
                 break;
             }
             else if (strlen(str) > 0) {
-                processString(taskList, str);
+                processString(taskList, jobList, str, &jobId);
             }
         }
     }
@@ -586,6 +750,8 @@ int main(int argc, char** argv) {
             printf("Falha ao abrir o arquivo.\n");
             free(taskList);
             taskList = NULL;
+            free(jobList);
+            jobList = NULL;
             return 0;
         }
         while ((fgets(aux, INPUT_SIZE, arq) != NULL)) {
@@ -625,7 +791,7 @@ int main(int argc, char** argv) {
             if (strlen(inputArray[i]) > 0) {
                 printf("%s\n", inputArray[i]);
                 if (strcmp(inputArray[i], "exit") != 0) {
-                    processString(taskList, inputArray[i]);
+                    processString(taskList, jobList, inputArray[i], &jobId);
                 }
             }
             // printf("Fim if 2\n");
@@ -635,6 +801,9 @@ int main(int argc, char** argv) {
     freeTaskList(taskList->head);
     free(taskList);
     taskList = NULL;
+    waitJobsFinal(jobList->head);
+    free(jobList);
+    jobList = NULL;
     
     return 0;
 }
