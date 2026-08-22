@@ -759,6 +759,8 @@ int main(int argc, char** argv) {
             qtd++;
             if (strcspn(aux, "\r\n") < strlen(aux)) {
                 aux[strcspn(aux, "\r\n")] = '\0';
+            } else if (aux[strcspn(aux, "\n")] < strlen(aux)) {
+                aux[strcspn(aux, "\n")] = '\0';
             }
             if (strcmp(aux, "exit") == 0) {
                 break;
@@ -779,6 +781,8 @@ int main(int argc, char** argv) {
             fgets(str, INPUT_SIZE, arq);
             if (strcspn(str, "\r\n") < strlen(str)) {
                 str[strcspn(str, "\r\n")] = '\0';
+            } else if (str[strcspn(str, "\n")] < strlen(str)) {
+                str[strcspn(str, "\n")] = '\0';
             }
             strcpy(inputArray[i], str);
             // printf("Fim if 1\n");
